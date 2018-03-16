@@ -86,17 +86,20 @@ form of choices.
 
 + Response 200 (application/json)
 
-            {
+        [
+              {
                 "idap_module": "Subscriber Statuses",
                 "updated_at": "2017-03-14T08:40:51.620Z",
+              },
+              {
                 "status":
                     {
                         "activated": 120,
                         "provisioned": 150,
                         "suspended": 30
-                    }
-            }
-            
+                    }                
+              }       
+        ]
 
 ## IDAP :: Summary - Online Subscribers [/online-subscribers-no-filter]
 
@@ -104,16 +107,61 @@ form of choices.
 
 + Response 200 (application/json)
 
-            {
+        [
+              {
                 "idap_module": "Online Subscribers No Filter",
-                "updated_at": "2017-03-14T08:40:51.620Z",
+                "updated_at": "2017-03-14T08:40:51.620Z"
+              },
+              {
+                "target": "carbon.agents.subscribers.online",
                 "datapoints": [
-                            [
-                                0.20639360452556796,
-                                1521117120
-                            ],
-                            [
-                                0.020000277999927395,
-                                1521117180
-                            ]
-            }
+                    [
+                        100,
+                        1521117120
+                    ],
+                    [
+                        150,
+                        1521117180
+                    ]
+                ]
+              }       
+        ]
+        
+## IDAP :: Summary - F5 CPU Usage [/f5-cpu-usage]
+
+### F5 CPU Usage  [GET]
+
++ Response 200 (application/json)
+
+        [
+              {
+                "idap_module": "F5 CPU Usage",
+                "updated_at": "2017-03-14T08:40:51.620Z"
+              },
+              {
+                "target": "carbon.agents.server-2.cpuUsage",
+                "datapoints": [
+                  [
+                    0.20639360452556796,
+                    1521117120
+                  ],
+                  [
+                    0.020000277999927395,
+                    1521117180
+                  ]
+                ]
+              },
+              {
+                "target": "carbon.agents.server-2.cpuUsage",
+                "datapoints": [
+                  [
+                    0.026665320040574116,
+                    1521088920
+                  ],
+                  [
+                    0.02666483255922161,
+                    1521088980
+                  ]
+                ]
+              }            
+        ]
