@@ -80,7 +80,7 @@ form of choices.
             }
             
             
-## Questions Collection [/subscriber-statuses]
+## IDAP :: Customer Dashboard - Summary [/subscriber-statuses]
 
 ### List All Subscribers Statuses [GET]
 
@@ -95,4 +95,25 @@ form of choices.
                         "provisioned": 150,
                         "suspended": 30
                     }
+            }
+            
+
+## IDAP :: Summary - Online Subscribers [/online-subscribers-no-filter]
+
+### Online Subscribers  [GET]
+
++ Response 200 (application/json)
+
+            {
+                "idap_module": "Online Subscribers No Filter",
+                "updated_at": "2017-03-14T08:40:51.620Z",
+                "datapoints": [
+                            [
+                                0.20639360452556796,
+                                1521117120
+                            ],
+                            [
+                                0.020000277999927395,
+                                1521117180
+                            ]
             }
