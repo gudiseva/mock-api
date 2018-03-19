@@ -165,3 +165,65 @@ form of choices.
                 ]
               }            
         ]
+        
+## IDAP :: Summary - Success Vs Failure Calls [/success-failure-calls]
+
+### Success Vs Failure Calls  [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "idap_module": "Success Vs Failure Calls",
+            "updated_at": "2017-03-14T08:40:51.620Z"
+          },
+          {
+            "target": "elasticsearch.<index_name>",
+            "aggregations": {
+              "success_stats": {
+                "bg_call": {
+                  "count": 2,
+                  "percentage": 17
+                },
+                "adhc_call": {
+                  "count": 30,
+                  "percentage": 88
+                },
+                "grp_call": {
+                  "count": 50,
+                  "percentage": 91
+                },
+                "pvt_call": {
+                  "count": 162,
+                  "percentage": 98
+                },
+                "all": {
+                  "count": 80,
+                  "percentage": 88
+                }
+              },
+              "failure_stats": {
+                "bg_call": {
+                  "count": 10,
+                  "percentage": 83
+                },
+                "adhc_call": {
+                  "count": 4,
+                  "percentage": 12
+                },
+                "grp_call": {
+                  "count": 5,
+                  "percentage": 9
+                },
+                "pvt_call": {
+                  "count": 3,
+                  "percentage": 88
+                },
+                "all": {
+                  "count": 22,
+                  "percentage": 2
+                }
+              }
+            }
+          }
+        ]
