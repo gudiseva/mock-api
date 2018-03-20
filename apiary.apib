@@ -227,3 +227,109 @@ form of choices.
             }
           }
         ]
+        
+## IDAP :: Subscribers - Manufacturer Count [/manufacturer-count]
+
+### Manufacturer Count  [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "idap_module": "Manufacturer Count",
+            "updated_at": "2017-03-14T08:40:51.620Z"
+          },
+          {
+            "target": "elasticsearch.<index_name>",
+            "aggregations": {
+              "manufacturer_count": {
+                "sonim": {
+                  "count": 50
+                },
+                "samsung": {
+                  "count": 20
+                },
+                "kyocera": {
+                  "count": 10
+                },
+                "apple": {
+                  "count": 15
+                },
+                "blackberry": {
+                  "count": 5
+                }
+              }
+            }
+          }
+        ]
+        
+## IDAP :: Subscribers - Device OS Count [/device-os-count]
+
+### Device OS Count  [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "idap_module": "Device OS Count",
+            "updated_at": "2017-03-14T08:40:51.620Z"
+          },
+          {
+            "target": "elasticsearch.<index_name>",
+            "aggregations": {
+              "device_os_count": {
+                "android": {
+                  "count": 70
+                },
+                "ios": {
+                  "count": 30
+                },
+                "windows": {
+                  "count": 20
+                },
+                "unknown": {
+                  "count": 5
+                },
+                "blackberry": {
+                  "count": 25
+                }
+            }
+          }
+        ]
+        
+## IDAP :: Subscribers - Device Model Count [/device-model-count]
+
+### Device Model Count  [GET]
+
++ Response 200 (application/json)
+
+        [
+          {
+            "idap_module": "Device Model Count",
+            "updated_at": "2017-03-14T08:40:51.620Z"
+          },
+          {
+            "target": "elasticsearch.<index_name>",
+            "aggregations": {
+              "device_model_count": {
+                "sonim xps": {
+                  "count": 50
+                },
+                "kyocera duraforce": {
+                  "count": 20
+                },
+                "samsung galaxy rugby pro": {
+                  "count": 10
+                },
+                "sonim xps560 bolt": {
+                  "count": 15
+                },
+                "kyocera dura xe": {
+                  "count": 5
+                },
+                "sonim xp1520 bolt sl": {
+                  "count": 5
+                }
+            }
+          }
+        ]
